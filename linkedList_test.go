@@ -1,24 +1,16 @@
-package goLinkedList
+package goLinkedList_test
 
 import (
 	"testing"
+	"github.com/slimaneakalia/goLinkedList"
 )
 
-func TestGetValue(t *testing.T){
-	listHead := &LinkedList{ value: "head 1" }
-	if listHead.GetValue() != "head 1"{
-		t.Errorf("GetValue not working, current value %v", listHead.GetValue())
-	} else {
-		t.Log("GetValue is working")
-	}
-}
-
 func TestAddValue(t *testing.T){
-	listHead := &LinkedList{ value: "head 1" }
+	listHead := &goLinkedList.LinkedList{ Value: "head 1" }
 	listHead = listHead.AddValue("head 2")
 
-	if listHead.GetValue() != "head 2"{
-		t.Errorf("AddValue not working, current value %v", listHead.GetValue())
+	if listHead.Value != "head 2"{
+		t.Errorf("AddValue not working, current value %v", listHead.Value)
 	} else {
 		t.Log("AddValue is working")
 	}
@@ -26,7 +18,7 @@ func TestAddValue(t *testing.T){
 }
 
 func TestFindValue(t *testing.T){
-	listHead := &LinkedList{ value: "head 1" }
+	listHead := &goLinkedList.LinkedList{ Value: "head 1" }
 	listHead = listHead.AddValue("head 2")
 	listHead = listHead.AddValue("head 3")
 
@@ -40,7 +32,7 @@ func TestFindValue(t *testing.T){
 }
 
 func TestPrint(t *testing.T){
-	listHead := &LinkedList{ value: "head 1" }
+	listHead := &goLinkedList.LinkedList{ Value: "head 1" }
 	listHead = listHead.AddValue("head 2")
 	listHead = listHead.AddValue("head 3")
 

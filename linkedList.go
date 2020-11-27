@@ -3,20 +3,16 @@ package goLinkedList
 import "fmt"
 
 type LinkedList struct{
-	value interface{}
-	next *LinkedList
+	Value interface{}
+	Next *LinkedList
 }
 
 type EqualityComparatorFunc func(interface{}, interface{}) bool
 
-func (head *LinkedList) GetValue() interface{}{
-	return head.value
-}
-
 func (head *LinkedList) AddValue(v interface{}) *LinkedList{
 	return &LinkedList{
-		value: v,
-		next: head,
+		Value: v,
+		Next: head,
 	}
 }
 
@@ -34,11 +30,11 @@ func (head *LinkedList) FindValue(value interface{},
 	}
 
 	for tmp != nil {
-		if eqCmp(tmp.value, value) {
+		if eqCmp(tmp.Value, value) {
 			return tmp
 		}
 
-		tmp = tmp.next
+		tmp = tmp.Next
 	}
 
 	return nil
@@ -48,8 +44,8 @@ func (head *LinkedList) Print() string{
 	str := ""
 	tmp := head
 	for tmp != nil {
-		str += fmt.Sprintf("%v - ", tmp.value)
-		tmp = tmp.next
+		str += fmt.Sprintf("%v - ", tmp.Value)
+		tmp = tmp.Next
 	}
 
 	return str
