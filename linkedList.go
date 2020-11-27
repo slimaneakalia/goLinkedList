@@ -1,4 +1,4 @@
-package github.com/slimaneakalia/goLinkedList/linkedList
+package linkedList
 
 import "fmt"
 

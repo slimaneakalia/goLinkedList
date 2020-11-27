@@ -1,4 +1,4 @@
-package github.com/slimaneakalia/goLinkedList/linkedList_test
+package linkedList_test
 
 import (
 	"testing"
