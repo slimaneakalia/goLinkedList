@@ -1,8 +1,7 @@
-package linkedList_test
+package goLinkedList
 
 import (
 	"testing"
-	"github.com/slimaneakalia/goLinkedList/linkedList"
 )
 
 func TestGetValue(t *testing.T){
