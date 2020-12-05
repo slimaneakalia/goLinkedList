@@ -16,7 +16,7 @@ func (head *LinkedList) AddValue(v interface{}) *LinkedList{
 	}
 }
 
-func defaultEqualityComparator(a interface{}, b interface{}) bool {
+func DefaultEqualityComparator(a interface{}, b interface{}) bool {
 	return a == b
 }
 
@@ -26,7 +26,7 @@ func (head *LinkedList) FindValue(value interface{},
 	tmp := head
 	eqCmp := equalityComparator
 	if equalityComparator == nil {
-		eqCmp = defaultEqualityComparator
+		eqCmp = DefaultEqualityComparator
 	}
 
 	for tmp != nil {
