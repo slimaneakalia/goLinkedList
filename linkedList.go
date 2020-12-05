@@ -1,4 +1,4 @@
-package goLinkedList
+package golinkedlist
 
 import "fmt"
 

@@ -1,12 +1,12 @@
-package goLinkedList_test
+package golinkedlist_test
 
 import (
 	"testing"
-	"github.com/slimaneakalia/goLinkedList"
+	"github.com/slimaneakalia/golinkedlist"
 )
 
 func TestAddValue(t *testing.T){
-	listHead := &goLinkedList.LinkedList{ Value: "head 1" }
+	listHead := &golinkedlist.LinkedList{ Value: "head 1" }
 	listHead = listHead.AddValue("head 2")
 
 	if listHead.Value != "head 2"{
@@ -18,7 +18,7 @@ func TestAddValue(t *testing.T){
 }
 
 func TestFindValue(t *testing.T){
-	listHead := &goLinkedList.LinkedList{ Value: "head 1" }
+	listHead := &golinkedlist.LinkedList{ Value: "head 1" }
 	listHead = listHead.AddValue("head 2")
 	listHead = listHead.AddValue("head 3")
 
@@ -32,7 +32,7 @@ func TestFindValue(t *testing.T){
 }
 
 func TestPrint(t *testing.T){
-	listHead := &goLinkedList.LinkedList{ Value: "head 1" }
+	listHead := &golinkedlist.LinkedList{ Value: "head 1" }
 	listHead = listHead.AddValue("head 2")
 	listHead = listHead.AddValue("head 3")
 
