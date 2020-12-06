@@ -9,6 +9,25 @@ type LinkedList struct{
 
 type EqualityComparatorFunc func(interface{}, interface{}) bool
 
+func AddToEndOrCreateList(targetList *LinkedList, value interface{}) *LinkedList{
+	newNode := &LinkedList{
+		Value: value,
+		Next: nil,
+	}
+
+	if targetList == nil {
+		return newNode
+	}
+	
+	tmpPointer := targetList
+	for tmpPointer.Next != nil {
+		tmpPointer = tmpPointer.Next
+	}
+
+	tmpPointer.Next = newNode
+	return targetList
+}
+
 func (head *LinkedList) AddValue(v interface{}) *LinkedList{
 	return &LinkedList{
 		Value: v,

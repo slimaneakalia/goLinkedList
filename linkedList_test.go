@@ -44,3 +44,21 @@ func TestPrint(t *testing.T){
 		t.Log("Print is working")
 	}
 }
+
+
+func TestAddToEndOrCreateList(t *testing.T){
+	// Add to empty list
+	list := golinkedlist.AddToEndOrCreateList(nil, 15)
+	found := list.Print()
+	expected := "15 - "
+	if found != expected{
+		t.Errorf("AddToEndOrCreateList error, expected: %v, found: %v", expected, found)
+	}
+
+	list = golinkedlist.AddToEndOrCreateList(list, 30)
+	found = list.Print()
+	expected = "15 - 30 - "
+	if found != expected{
+		t.Errorf("AddToEndOrCreateList error, expected: %v, found: %v", expected, found)
+	}
+}
